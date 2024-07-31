@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>숫자 피라미드 생성기</title>
+    <style>
+        pre {
+            font-family: monospace;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <h1>숫자 피라미드 생성기</h1>
+    <form method="POST">
+        <label for="숫자열">줄 수:</label>
+        <input type="number" id="숫자열" name="숫자열" min="1" max="20" required>
+        <input type="submit" value="피라미드를 만들어줘">
+    </form>
+    {% if 피라미드 %}
+        <h2>{{ 숫자열 }}줄짜리 피라미드입니다~:</h2>
+        <pre>
+{% for row in 피라미드 %}
+{{ row }}
+{% endfor %}
+        </pre>
+    {% endif %}
+</body>
+</html>
